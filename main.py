@@ -2,6 +2,7 @@ from project import functions
 import time
 
 now = time.strftime("%b %d, %Y %H:%M:%S")
+print("Welcome to to-do app!")
 print("It is ", now)
 
 while True:
@@ -58,4 +59,3 @@ while True:
         print("Wrong command, try again!")
 
 print("Bye!")
-
