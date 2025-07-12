@@ -12,3 +12,7 @@ def write_todos(todos_arg, filepath=path):
     """Write to-do items list in the text file."""
     with open(path, "w") as file:
         file.writelines(todos_arg)
+
+
+if __name__ == "__main__":
+    print("Hello World!")
