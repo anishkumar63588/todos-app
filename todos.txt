@@ -1,6 +1,5 @@
-task 1
-task 2
-todo 1
-todo 2
-clean the house.
+Wake in the morning.
+Go for walk.clean the house.
 throw the trash.
+Go to market.
+Buy the Groceries.Come back to house.
