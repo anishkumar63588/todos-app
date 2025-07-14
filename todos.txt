@@ -1,2 +1,6 @@
+task 1
 task 2
-task 3
+todo 1
+todo 2
+clean the house.
+throw the trash.
