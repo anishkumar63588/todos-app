@@ -1,5 +1,5 @@
 import functions
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 
 label_add = sg.Text("Type in a to-do item")
 input_box = sg.InputText(tooltip="Enter item", key="todo")
@@ -9,12 +9,14 @@ list_box = sg.Listbox(values=functions.get_todos(),
                       size=(45, 10),
                       enable_events=True)
 edit_button = sg.Button("Edit")
-
+complete_button = sg.Button("Complete")
+exit_button = sg.Button("Exit")
 
 window = sg.Window(title='Welcome to to-do App',
                    layout=[[label_add],
                            [input_box, add_button],
-                           [list_box, edit_button]],
+                           [list_box, edit_button],
+                           [complete_button, exit_button]],
                    font=("Helvetica", 20))
 
 while True:
@@ -39,10 +41,19 @@ while True:
 
             functions.write_todos(todos)
             window["todos"].update(values=todos)
+        case "Complete":
+            todo_to_complete = values["todos"][0]
+            todos = functions.get_todos()
+            index = todos.index(todo_to_complete)
+            todos.pop(index)
+            functions.write_todos(todos)
+            window["todos"].update(values=todos)
+            window["todo"].update(value="")
+        case "Exit":
+            break
         case "todos":
             window['todo'].update(value=values['todos'][0])
-        case sg.WIN_CLOSED:
-            break
 
+print("Thanks for using To-Do App")
 window.close()
 
