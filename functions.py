@@ -15,4 +15,4 @@ def write_todos(todos_arg, filepath=path):
 
 
 if __name__ == "__main__":
-    pass
+    print("Hello World!")
