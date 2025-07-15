@@ -1,3 +1,6 @@
-/venv/
+.venv
 .idea
 bonus
+run_app.sh
+dist
+build
